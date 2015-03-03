@@ -1,36 +1,19 @@
 $().ready(function() {
 
-	$(".tabcontrol").tabs("#entries > div", {
-		effect:'fade',
-		fadeInSpeed:'4000'
+	$('.tabcontrol li a').click(function(){
+		var eq = $(this).parent('li').index();
+		$('.tile').hide().eq(eq).fadeIn(300);
 	});
 
-	var titleoriginalTitleText = $("#title").html();
-	var baconoriginalTitleText = $("#bacon-title").html();
-	var nutsBoltsoriginalTitleText = $("#nuts-title").html();
+	$('.tabcontrol li a').eq(0).click();
 
-	$("#no-apples").toggle(function() {
-			$("#title").html("∴ NO FAIRS!!!");
-			pageTracker._trackPageview("apple-nofair");
-	}, function() {
-			$("#title").html(titleoriginalTitleText);
-			pageTracker._trackPageview("apple-noapples");
-  });
+	$('.tile').click(function() {
+			var the = $(this);
+			var origTitle = the.text();
+			var altTitle  = the.data('alttitle');
 
-	$("#bacon-date").toggle(function() {
-			$("#bacon-title").html("Don't HATE!!");
-			pageTracker._trackPageview("bacon-dont-hate");
-	}, function() {
-			$("#bacon-title").html(baconoriginalTitleText);
-			pageTracker._trackPageview("bacon-dates");
-  });
-
-  $("#nuts-bolts").toggle(function() {
-			$("#nuts-title").html("Some are about fasteners!!!");
-			pageTracker._trackPageview("fasteners");
-        	}, function() {
-	$("#nuts-title").html(nutsBoltsoriginalTitleText);
-			pageTracker._trackPageview("jokesaboutfood");
-  });
+			the.data('alttitle', origTitle);
+			the.find('h1').text(altTitle);
+	});
 
 });

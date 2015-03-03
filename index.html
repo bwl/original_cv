@@ -1,58 +1,26 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN"
-   "http://www.w3.org/TR/html4/strict.dtd">
-<html lang="en">
-<head>
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-	<title>Cheeseburger Vacation!</title>
-	<meta name="author" content="Benjamin Lundquist">
-	<meta name="description" content="Hey there!! Let's go on a super magical vacation!!">
-	<link rel="stylesheet" href="css/reset-fonts-grids.css" type="text/css" media="screen" title="no title" charset="utf-8">
-	<link rel="stylesheet" href="css/style.css" type="text/css" media="screen" title="no title" charset="utf-8">
-	<script src="js/jquery.tools.min.js" type="text/javascript" charset="utf-8"></script>
-	<script src="js/action.js" type="text/javascript" charset="utf-8"></script>
-</head>
+<!DOCTYPE html>
+<html>
+  <head>
+  	<title>Cheeseburger Vacation!</title>
+  	<meta name="description" content="Hey there!! Let's go on a super magical vacation!!">
+  	<link rel="stylesheet" href="css/reset-fonts-grids.css">
+  	<link rel="stylesheet" href="css/style.css">
+  </head>
 
 <body>
-
 	<div id="menubar">
-	<h1 class="logo">cheeseburgervacation</h1>
-		<div class="user">
-	<h2 class"user-link">Login</h2>
-		</div>
-
-
-	<ul class="tabcontrol">
-		<li>01</li>
-		<li>02</li>
-		<li>03</li>
-		<li>04</li>
-		<li>05</li>
-		<li>06</li>
-
-
-		</ul>
+	   <h1 class="logo">cheeseburgervacation</h1>
+	    <ul class="tabcontrol">
+    		<li>01</li>
+    		<li>02</li>
+    		<li>03</li>
+    		<li>04</li>
+    		<li>05</li>
+    		<li>06</li>
+		  </ul>
 	</div>
 
-	<script type="text/javascript" charset="utf-8">
-		$(document).ready(function(){
-
-			$(".tabcontrol").tabs("#entries > div", {
-
-
-				effect:'fade',
-				fadeInSpeed:'4000'
-
-
-			});
-
-
-		})
-
-	</script>
-
-
 	<div id="wrap">
-
 	<div id="entries">
 
 		<div>
@@ -89,6 +57,10 @@
 	</div>
 
 	</div>
+
+  <script src="js/jquery.tools.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/action.js" type="text/javascript" charset="utf-8"></script>
+
 	<script type="text/javascript">
 	var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
 	document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
